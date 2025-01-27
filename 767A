@@ -1,0 +1,15 @@
+n = int(input())
+size = list(map(int, input().split()))
+temp = n
+fallen_snacks = set()
+for num in size:
+    fallen_snacks.add(num)
+    if num == temp:
+        print(num, end=' ')
+        temp -= 1
+        while temp in fallen_snacks:
+            print (temp, end=' ')
+            temp -= 1
+        print()
+    else:
+        print()
